@@ -8,6 +8,8 @@ timeout 10
 
 for /f "delims=" %%i in ('dir /b ".\bin\windows\*.bat"') do (
 
+  echo %%i
+
   CALL .\bin\windows\%%i
 
   IF ERRORLEVEL 1 IF NOT ERRORLEVEL 2 exit /b 1
